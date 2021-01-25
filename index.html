@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bad+Script">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="Todolist.css">
+    <script rel="stylesheet" src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="todo">
+        <h1>Мой список дел: <i id="pensil" class="fas fa-pencil-alt"></i></h1>
+        <input type="text" placeholder="Добавить список">
+        <ul class="todos">
+            <li>
+                <span class="todo-text">Вымыть кухню</span>
+                <span class="todo-trash">
+                    <i class="fas fa-trash-alt"></i>
+                </span>
+            </li>
+            <li>
+                <span class="todo-text"> Пойти в театр</span>
+                <span class="todo-trash">
+                    <i class="fas fa-trash-alt"></i>
+                </span>
+            </li>
+        </ul>
+        <div id="buttons">
+            <button class="save">Сохранить</button>
+            <button class="clear">Очистить</button>
+            <button class="showTips">Справка</button>
+        </div>
+    </div>
+    <div id="overlay">
+        <a href="javascrip:void(0)" class="closeTips">&times;</a>
+        <ul class="tips">
+            <li>Чтобы показать или спрятать поле ввода,кликните на карандаш</li>
+            <li>Для добавления списка дел напишите текст в поле ввода и нажмите ввод</li>
+            <li>Чтобы удалить один пункт, наведите на него и нажмите на значок корзины</li>
+            <li>Чтобы удалить все списки дел, нажмите "Очистить"</li>
+            <li>Нажмите "Сохранить", чтобы сохранить список дел на потом</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
