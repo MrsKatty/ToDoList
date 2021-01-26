@@ -1,10 +1,15 @@
 function onPageLoaded() {
-    const input = document.querySelector("input[type='text']");
-    const ul = document.querySelector("ul.todos") ;
+    const input = document.querySelector("input[type='text']"),
+        ul = document.querySelector("ul.todos"),
+        saveButton = document.querySelector("button.save"),
+        clearButton = document.querySelector("button.clear"),
+        showTipsButton = document.querySelector("button.showTips"),
+        closeTipsButton = document.querySelector("a.closeTips"),
+        overlay = document.querySelector("#overlay");
 
     function createTodo() {
         const li = document.createElement("li");
-        const textSpan = document.createElement("spant");
+        const textSpan = document.createElement("span");
         textSpan.classList.add("todo-text");
         const newTodo = input.value;
         textSpan.append(newTodo);
@@ -16,8 +21,32 @@ function onPageLoaded() {
         deleteBth.appendChild(icon);
 
         ul.appendChild(li).append(textSpan, deleteBth);
-        input.valu = "";
+        input.value = "";
         listenDeleteTodo(deleteBth);
+    }
+
+    function listenDeleteTodo(element) {
+        element.addEventListener("click", (event) => {
+            element.parentElement.remove();
+
+        });
+    }
+
+    function loadTodos() {
+        const data = localStorage.getItem("todos");
+        if (data) {
+            ul.innerHTML = data;
+        }
+        const deleteButtons = document.querySelectorAll("span.todo-trash");
+        for (const button of deleteButtons) {
+            listenDeleteTodo(button);
+        }
+    }
+
+    function onClickTodo(event) {
+        if (event.target.tagName === "LI") {
+            event.target.classList.toggle("checked");
+        }
     }
 
     input.addEventListener("keypress", (keyPressed) => {
@@ -26,7 +55,25 @@ function onPageLoaded() {
             createTodo();
         }
     });
-    
     ul.addEventListener("click", onClickTodo);
+
+    saveButton.addEventListener("click", () => {
+        localStorage.setItem("todos", ul.innerHTML);
+    });
+    clearButton.addEventListener("click", () => {
+        ul.innerHTML = "";
+        localStorage.removeItem('todos', ul.innerHTML);
+    });
+    showTipsButton.addEventListener("click", () => {
+        overlay.style.height = "100%";
+    });
+    closeTipsButton.addEventListener("click", () => {
+        overlay.style.height = "0";
+    });
+
+    loadTodos();
 }
+
+
 document.addEventListener("DOMContentLoaded", onPageLoaded);
+
