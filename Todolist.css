@@ -32,6 +32,39 @@ input::placeholder {
 color: white;
 }
 
+.save {
+    color: white;
+    background-color: rgba(38, 110, 165, 0.3); 
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    border: 2px solid rgb(106, 106, 106); 
+    text-align: center;
+}
+
+.clear {
+    color: white;
+    background-color: rgba(38, 110, 165, 0.3); 
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    border: 2px solid rgb(106, 106, 106);  
+    text-align: center;
+}
+
+.showTips {
+    color: white;
+    background-color: rgba(38, 110, 165, 0.3); 
+    width: 90px;
+    height: 30px;
+    font-size: 15px;
+    border: 2px solid rgb(106, 106, 106);  
+    text-align: center;
+}
+
+.todos {
+    color: lavender;
+}
 
 
 
