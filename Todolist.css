@@ -1,4 +1,37 @@
-/* #overlay {
-    height: 60px;
-    width: 130px;
-} */
+body {
+display: flex;
+align-items: center;
+flex-direction: column;
+background-image: url(img/991761.jpg);
+font-family: 'Lora', serif;
+}
+
+h1 {
+color: white;
+background-color: rgba(38, 110, 165, 0.3);
+padding: 20px ;
+}
+
+#pensil {
+margin-left: 10px;
+width: 40px;
+height: 40px;
+}
+
+input {
+color: white;
+background-color: rgba(38, 110, 165, 0.3); 
+width: 400px;
+height: 30px;
+font-size: 20px;
+border: 2px solid rgb(106, 106, 106);
+padding-left: 20px;
+}
+
+input::placeholder {
+color: white;
+}
+
+
+
+
