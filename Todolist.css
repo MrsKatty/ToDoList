@@ -29,7 +29,7 @@ padding-left: 20px;
 }
 
 input::placeholder {
-color: white;
+    color: white;
 }
 
 .save {
@@ -64,7 +64,43 @@ color: white;
 
 .todos {
     color: lavender;
+    background-color: rgba(38, 110, 165, 0.3); 
+    font-size: 15px;
+    height: auto;
+}
+.checked {
+    text-decoration: line-through brown;
 }
 
+.todos>li {
+    padding: 10px;
+    font-size: 20px;
+}
 
+#overlay {
+    color: lavender;
+    background-color: rgba(38, 110, 165, 0.3); 
+    font-size: 18px;
+    height: auto;
+    padding-right: 20px;
+    margin-top: 10px;
+}
 
+.closeTips {
+    color: rgb(74, 29, 29);
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.showTips:hover {
+    cursor: pointer;
+    background-color: rgb(99, 14, 14);
+}
+.clear:hover {
+    cursor: pointer;
+    background-color: rgb(51, 35, 145);
+}
+.save:hover {
+    cursor: pointer;
+    background-color: rgb(184, 194, 65);
+}

@@ -65,10 +65,10 @@ function onPageLoaded() {
         localStorage.removeItem('todos', ul.innerHTML);
     });
     showTipsButton.addEventListener("click", () => {
-        overlay.style.height = "100%";
+        overlay.style.display = "block";
     });
     closeTipsButton.addEventListener("click", () => {
-        overlay.style.height = "0";
+        overlay.style.display = "none";
     });
 
     loadTodos();
